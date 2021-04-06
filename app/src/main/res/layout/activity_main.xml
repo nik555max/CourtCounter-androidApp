@@ -72,6 +72,21 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"/>
 
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undoA"
+                    android:text="UNDO"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="minusOneA"
+                    android:text="Oops! -1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+
             </LinearLayout>
 
 <!--            For gray line between both the teams-->
@@ -136,6 +151,22 @@
                     android:layout_marginRight="24dp"
                     android:onClick="addOneForTeamB"
                     android:text="FREE THROW" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="undoB"
+                    android:text="UNDO"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="minusOneb"
+                    android:text="Oops! -1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

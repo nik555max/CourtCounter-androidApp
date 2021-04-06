@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+    int backupA=scoreTeamA;
+    int backupB=scoreTeamB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +24,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /** undo last team A*/
+    public void undoA(View v)
+    {
+        scoreTeamA=backupA;
+        displayForTeamA(scoreTeamA);
+    }
+
+//    Undo last for B
+    /** undo last team A*/
+    public void undoB(View v)
+    {
+        scoreTeamB=backupB;
+        displayForTeamB(scoreTeamB);
+    }
+
+//    minus one A
+    public void minusOneA(View v)
+    {
+        if(scoreTeamA>0) scoreTeamA-=1;
+        displayForTeamA(scoreTeamA);
+    }
+
+//    minus 1   B
+public void minusOneb(View v)
+{
+    if(scoreTeamB>0) scoreTeamB-=1;
+    displayForTeamB(scoreTeamB);
+}
+
+//
 
     /**
      * Increase the score for Team A by 1 point.
      */
     public void addOneForTeamA(View v) {
+        backupA=scoreTeamA;
         scoreTeamA += 1;
 
         displayForTeamA(scoreTeamA);
@@ -36,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 2 points.
      */
     public void addTwoForTeamA(View v) {
+        backupA=scoreTeamA;
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
@@ -44,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 3 points.
      */
     public void addThreeForTeamA(View v) {
+        backupA=scoreTeamA;
         scoreTeamA += 3;
 
         displayForTeamA(scoreTeamA);
@@ -53,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 3 points.
      */
     public void addThreeForTeamB(View v) {
+        backupB=scoreTeamB;
         scoreTeamB += 3;
 
         displayForTeamB(scoreTeamB);
@@ -62,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 2 points.
      */
     public void addTwoForTeamB(View v) {
+        backupB=scoreTeamB;
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
@@ -70,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 1 point.
      */
     public void addOneForTeamB(View v) {
+        backupB=scoreTeamB;
         scoreTeamB += 1;
 
         displayForTeamB(scoreTeamB);
